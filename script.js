@@ -11,7 +11,7 @@ form.addEventListener("submit", async (e) => {
   };
 
   // Envia o produto via POST
-  const response = await fetch("web-production-8273.up.railway.app/products", {
+  const response = await fetch("https://web-production-8273.up.railway.app/products", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -31,7 +31,7 @@ form.addEventListener("submit", async (e) => {
 
 // Busca os produtos existentes e exibe na tela
 async function fetchAndDisplayProducts() {
-  const response = await fetch("web-production-8273.up.railway.app/products");
+  const response = await fetch("https://web-production-8273.up.railway.app/products");
   const products = await response.json();
 
   list.innerHTML = "";
